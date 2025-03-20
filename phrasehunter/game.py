@@ -1,40 +1,52 @@
+from phrasehunter.phrase import Phrase
+import random
+
+
+
 class Game:
     def __init__(self):
-# track the number of missed guesses by the player
-# initial value is 0
-# 0 is no guesses at the start of the game
         self.missed = 0
         self.phrases = self.create_phrases()
-   #     currently in play
-        self.active_phrase = None
-# list with all guesses
-# list with a string for a space
+        self.active_phrase = self.get_random_phrase()
         self.guesses = [" "]
 
     def create_phrases(self):
-        return ["one value", "two values", "three", "four", "five"]
+        phrases = [Phrase("Cat in the hat"), Phrase("The early bird gets the worm"), Phrase("The unexamined life is not worth living"), Phrase("You must be the change you wish to see in the world"), Phrase("Look deep into nature, and then you will understand everything better")]
+        return phrases
+
+    def get_random_phrase(self):
+        return random.choice(self.phrases)
+
+    def welcome(self):
+        print("WELCOME TO PHRASE HUNTER CHALLENGE!.")
+
+    def start(self):
+        self.welcome()
+
+        while self.missed < 5 and not self.active_phrase.check_complete(self.guesses):
+            print(f"Number missed: {self.missed}")
+            self.active_phrase.display(self.guesses)
+
+            user_guess = self.get_guess()
+#        print(f"Enter a letter: {user_guess}")
+            self.guesses.append(user_guess)
+#        self.active_phrase.display(self.guesses)
+
+            if not self.active_phrase.check_guess(user_guess):
+                self.missed += 1
+        self.game_over()
+#            print("YAY")
+#       else:
+#            print("Bummer!")
+
+    def get_guess(self):
+        guess = input("Guess a letter: ")
+        return guess
+
+    def game_over(self):
+        if self.missed == 5:
+            print("Game lost!")
+        else:
+            print("You won!")
 
 
-    #def start(self):
-    # property set to the phrase object returned from a call to the get_random_phrase()
-    #    self.active_phrase
-
-    #def get_random_phrase(self):
-
-
-    #def welcome(self):
-     #   print("Welcome message user!")
-
-    # get the guess from the user and record it in the guess attribute
-   # def get_guess(self):
-    #    self.guesses = guesses
-
-   # def game_over(self):
-    #    print("win or loss")
-
-
-# the game instance can be responsible for starting the game loop:
-# getting player's input()
-# guesses to pass to a phrase object to perform its responsabilities against, 
-# determining if a win/ loss happens after the player run out of turns
-# phrase is completely guessed
