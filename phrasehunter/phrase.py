@@ -1,22 +1,20 @@
-# Create your Phrase class logic here.
-# create a class to handle the creation of phrases
 class Phrase:
     def __init__(self, phrase):
         self.phrase = phrase.lower()
 
-# iterating over the phrase and replacing unguessed letters
-# print out the phrase with the guessed letters
-# print and replace out unguessed letters as underscores
+    def display(self, guesses):
+        for letter in self.phrase:
+            if letter in guesses or letter == " ":
+                print(letter, end=" ")
+            else:
+                print("_", end=" ")
+        print()
 
-  #  def display(phrase_para, guessed):
-# [expression for item in iterable if condition]
-   #     di = " ".join([i if i in guessed or i == " " else "_" for i in phrase_para])
-    #    print(di)
+    def check_guess(self, user_guess):
+        return user_guess in self.phrase
 
-# check to see if the letter selected by the user matches a letter in the phrase
-    #def check_letter(self):
-
-
-# check to see if the whole phrase has been guessed
-    #def check_complete():
-#    pass
+    def check_complete(self, guesses):
+        for letter in self.phrase:
+            if letter not in guesses and letter != " ":
+                return False
+        return True
