@@ -1,36 +1,70 @@
-word guessing game
-select a phrase at random
-input individual characters
+# Word Guessing Game
 
+A console-based word guessing game written in Python. The player tries to guess a hidden phrase by selecting letters. The game continues until the player either guesses all the letters in the phrase (wins) or makes five incorrect guesses (loses).
 
-Flow of the Game
+---
 
-Using Python, you’ll create two Python classes with specific attributes and methods. You'll create a Game class for managing the game, and a Phrase class to help with storing attributes of a phrase with specific methods to help determine how to display the phrase in the game.
+## Features
 
-Your code will choose a random phrase and use some logic you will implement to display each letter of the phrase as underscore character placeholders, _.
+- Randomly selects a phrase from a predefined list.
+- Displays each letter as an underscore `_` until it is guessed.
+- Tracks correct and incorrect guesses.
+- Reveals all occurrences of a correctly guessed letter.
+- Limits the number of incorrect guesses to 5.
+- Console/terminal-based gameplay.
 
-Each time the player guesses a letter, the program compares the letter the player has chosen with the random phrase. If the letter is in the phrase, the phrase object is updated so that it displays the chosen letters on the screen.
+---
 
-A player continues to select letters until they guess the phrase (and win), or make five incorrect guesses (and lose).
+## How to Play
 
-If the player completes the phrase before they run out of guesses, a winning screen appears. If the player guesses incorrectly five times, a losing screen appears.
+1. Run the game in your terminal.
+2. A random phrase will be selected and displayed with underscores for each letter.
+3. Guess letters one at a time.
+4. Correct guesses reveal the letter in the phrase.
+5. Incorrect guesses increase the "missed" counter.
+6. The game ends when:
+   - All letters are guessed correctly → **You win!**
+   - Five incorrect guesses are made → **You lose!**
 
+---
 
+## Classes
 
-Understand the rules of the game:
+### `Phrase`
 
-This game will be entirely console/terminal based.
+Handles the phrase logic.
 
-The player’s goal is to guess all the letters in a hidden, random phrase. A phrase is a group of words.
+- **Attributes**
+  - `phrase`: the phrase string (lowercase)
+  - `guessed_letters`: list of letters already guessed correctly
 
-At the beginning of the game, the player only sees the number of letters and words in the phrase, represented by an underscore character _ as a placeholder on the screen for a given letter for that phrase.
+- **Methods**
+  - `display()`: returns the phrase with underscores for unguessed letters
+  - `check_guess(guess)`: returns `True` if the letter is in the phrase
+  - `add_guess(guess)`: adds the guessed letter to the list
+  - `is_complete()`: returns `True` if all letters have been guessed
 
-The player inputs a guess for a letter in the phrase.
+### `Game`
 
-Once a correct letter is guessed, a player cannot guess that letter again.
+Manages the game loop and player interactions.
 
-If the guessed letter is in the phrase at least once, the phrase will replace all positions showing the underscore _ with the appropriate letter. All occurrences of that letter are made visible (so if there are 3 A's, all of the A's in the phrase appear at once).
+- **Attributes**
+  - `phrases`: a list of `Phrase` objects
+  - `active_phrase`: the current `Phrase` being guessed
+  - `missed`: number of incorrect guesses
 
-If the selected letter is not in the phrase, the number missed increases by one.
+- **Methods**
+  - `start()`: begins the game
+  - `get_guess()`: prompts the player for a letter
+  - `handle_guess(guess)`: updates game state based on the guess
+  - `check_complete()`: checks if the phrase has been completely guessed
+  - `game_over()`: displays win/loss message
 
-The player keeps choosing letters until they reveal all the letters in the phrase, or until they make five incorrect guesses.
+---
+
+## Installation
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Techdegree-project-3.git
