@@ -17,7 +17,7 @@ A console-based word guessing game written in Python. The player tries to guess 
 
 ## How to Play
 
-1. Run the game in your terminal.
+1. Inside the branch enter: python3 app.py
 2. A random phrase will be selected and displayed with underscores for each letter.
 3. Guess letters one at a time.
 4. Correct guesses reveal the letter in the phrase.
