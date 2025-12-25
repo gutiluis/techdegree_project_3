@@ -62,6 +62,12 @@ Manages the game loop and player interactions.
 
 ---
 
+## Technologies Used:
+
+- Python
+
+---
+
 ## Installation
 
 1. Clone this repository:
