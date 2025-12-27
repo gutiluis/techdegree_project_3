@@ -1,5 +1,14 @@
 ## How it works:
 
+- python3 app.py
+2. A random phrase will be selected and displayed with underscores for each letter.
+3. Guess letters one at a time.
+4. Correct guesses reveal the letter in the phrase.
+5. Incorrect guesses increase the "missed" counter.
+6. The game ends when:
+   - All letters are guessed correctly → **You win!**
+   - Five incorrect guesses are made → **You lose!**
+
 # Word Guessing Game
 
 A console-based word guessing game written in Python. The player tries to guess a hidden phrase by selecting letters. The game continues until the player either guesses all the letters in the phrase (wins) or makes five incorrect guesses (loses).
@@ -14,19 +23,6 @@ A console-based word guessing game written in Python. The player tries to guess 
 - Reveals all occurrences of a correctly guessed letter.
 - Limits the number of incorrect guesses to 5.
 - Console/terminal-based gameplay.
-
----
-
-## How to Play
-
-1. Inside the branch enter: python3 app.py
-2. A random phrase will be selected and displayed with underscores for each letter.
-3. Guess letters one at a time.
-4. Correct guesses reveal the letter in the phrase.
-5. Incorrect guesses increase the "missed" counter.
-6. The game ends when:
-   - All letters are guessed correctly → **You win!**
-   - Five incorrect guesses are made → **You lose!**
 
 ---
 
@@ -70,6 +66,8 @@ Manages the game loop and player interactions.
 - Python
 
 ---
+
+###
 
 Clone repo:
 
