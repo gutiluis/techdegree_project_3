@@ -2,6 +2,11 @@
 
 To run within the terminal:
 - python3 app.py
+
+Create a word guessing game: "Phrase Hunter." Using Python and OOP (Object-Oriented Programming) to select a phrase at random, hidden from the player. 
+A player tries to guess the phrase by inputting individual characters within a determined amount of attempts.
+
+
 2. A random phrase will be selected and displayed with underscores for each letter.
 3. Guess letters one at a time.
 4. Correct guesses reveal the letter in the phrase.
