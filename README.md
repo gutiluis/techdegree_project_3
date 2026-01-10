@@ -1,5 +1,6 @@
 ## How it works:
 
+To run within the terminal:
 - python3 app.py
 2. A random phrase will be selected and displayed with underscores for each letter.
 3. Guess letters one at a time.
@@ -9,22 +10,8 @@
    - All letters are guessed correctly → **You win!**
    - Five incorrect guesses are made → **You lose!**
 
-# Word Guessing Game
 
 A console-based word guessing game written in Python. The player tries to guess a hidden phrase by selecting letters. The game continues until the player either guesses all the letters in the phrase (wins) or makes five incorrect guesses (loses).
-
----
-
-## Features
-
-- Randomly selects a phrase from a predefined list.
-- Displays each letter as an underscore `_` until it is guessed.
-- Tracks correct and incorrect guesses.
-- Reveals all occurrences of a correctly guessed letter.
-- Limits the number of incorrect guesses to 5.
-- Console/terminal-based gameplay.
-
----
 
 ## Classes
 
@@ -42,7 +29,6 @@ Handles the phrase logic.
 - add_guess(guess): adds the guessed letter to the list
 - is_complete(): returns `True` if all letters have been guessed
 
-### Game
 
 Manages the game loop and player interactions.
 
@@ -51,25 +37,46 @@ Manages the game loop and player interactions.
 - active_phrase: the current Phrase being guessed
 - missed: number of incorrect guesses
 
+-----
+
+#####
+
 ## Features:
 
+- Randomly selects a phrase from a predefined list.
+- Displays each letter as an underscore `_` until it is guessed.
+- Tracks correct and incorrect guesses.
+- Reveals all occurrences of a correctly guessed letter.
+- Limits the number of incorrect guesses to 5.
+- Console/terminal-based gameplay.
 - start(): begins the game
 - get_guess(): prompts the player for a letter
 - handle_guess(guess): updates game state based on the guess
 - check_complete(): checks if the phrase has been completely guessed
 - game_over(): displays win/loss message
 
----
+-----
+
+#####
 
 ## Technologies Used:
 
 - Python
 
----
+-----
 
 ###
+
+## Skills Learned:
+
+- importing modules
+
+-----
+
+#####
 
 Clone repo:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/Techdegree-project-3.git
+```
