@@ -78,5 +78,5 @@ Manages the game loop and player interactions.
 Clone repo:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Techdegree-project-3.git
+git clone https://github.com/gutiluis/Techdegree-project-3.git
 ```
