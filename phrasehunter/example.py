@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+# file: example.py
+# descr:
+
+
+
 class Student():
     def __init__(self, name):
         self.name = name

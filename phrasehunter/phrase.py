@@ -1,4 +1,11 @@
-#!/bin/env python
+#!/usr/bin/env python
+
+
+# file: phrase.py
+# descr:
+
+
+
 import logging
 
 

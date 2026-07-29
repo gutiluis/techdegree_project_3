@@ -1,7 +1,8 @@
-## How it works:
+>[!WARNING]
+>CURRENTLY UNDER DEVELOPMENT
 
-To run within the terminal:
-- python3 app.py
+
+# Phrasing game
 
 Create a word guessing game: "Phrase Hunter." Using Python and OOP (Object-Oriented Programming) to select a phrase at random, hidden from the player. 
 A player tries to guess the phrase by inputting individual characters within a determined amount of attempts.
@@ -25,70 +26,80 @@ The game ends when:
    - Five incorrect guesses are made → **You lose!**
 
 
-## Classes
+**Classes**
 
 ### `Phrase`
 
 Handles the phrase logic.
 
-## Attributes ##
+**Attributes**
 - phrase: the phrase string (lowercase)
 - guessed_letters: list of letters already guessed correctly
 
-## Methods ##
+**Methods**
 - display(): returns the phrase with underscores for unguessed letters
 - check_guess(guess): returns `True` if the letter is in the phrase
 - add_guess(guess): adds the guessed letter to the list
 - is_complete(): returns `True` if all letters have been guessed
 
-
 Manages the game loop and player interactions.
 
-## Attributes ##
+**Attributes**
 - phrases: a list of Phrase objects
 - active_phrase: the current Phrase being guessed
 - missed: number of incorrect guesses
 
------
+---
 
-#####
+## How it works
 
-## Features:
+```
+python3 app.py
+```
+
+---
+
+## Features
 
 - Randomly selects a phrase from a predefined list.
 - Displays each letter as an underscore `_` until it is guessed.
 - Tracks correct and incorrect guesses.
 - Reveals all occurrences of a correctly guessed letter.
 - Limits the number of incorrect guesses to 5.
-- Console/terminal-based gameplay.
+- CLI based gameplay.
 - start(): begins the game
 - get_guess(): prompts the player for a letter
 - handle_guess(guess): updates game state based on the guess
 - check_complete(): checks if the phrase has been completely guessed
 - game_over(): displays win/loss message
 
------
+---
 
-#####
-
-## Technologies Used:
+## Tech-Stack
 
 - Python
 
------
+---
 
-###
-
-## Skills Learned:
+## Skills
 
 - importing modules
+- random, logging module
 
------
+---
 
-#####
+## Contributing
 
-Clone repo:
+If you are interested in reporting/fixing issues and contributing directly to the code base, please see CONTRIBUTING.md for more information on what we're looking for and how to get started.
 
-```bash
-git clone https://github.com/gutiluis/Techdegree-project-3.git
-```
+---
+
+## Community
+
+Info on reporting bugs, getting help, finding third-party tools and sample apps, and more can be found on the Community page.
+
+---
+
+## License
+
+[MIT LICENSE](LICENSE)
